@@ -1,7 +1,16 @@
-h1 {
-    color: green;
-}
 
-h2 {
-    color:rgb(165, 245, 165);
+.col-log-9{
+
+  text-align: left;
+    
+}
+.canle{
+   
+    padding: 5px 10px;
+}
+.name{
+    color: red;
+}
+.canlecenter{
+    text-align: left;
 }
