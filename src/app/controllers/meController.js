@@ -5,9 +5,14 @@ const {mutipleMongooseToObject} = require('../../util/mongoose');
 class  MeControllers {
 
         //[GET] me/stored/courses
-    storedCourses (req, res){
-
-    res.render('me/stored-courses');
+    storedCourses (req, res,next){
+        Courses.find({})
+            .then(courses => res.render('me/stored-courses',{
+                courses:mutipleMongooseToObject(courses)
+                
+            }))
+            .catch(next);
+   
 }
 
 
