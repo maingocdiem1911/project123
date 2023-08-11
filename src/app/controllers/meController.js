@@ -13,8 +13,17 @@ class  MeControllers {
             }))
             .catch(next);
    
-}
+}    
+       //[GET] me/trash/courses
+    trashCourses (req,res,next){
+        Courses.findDeleted({})
+        .then(courses => res.render('me/trash-courses',{
+            courses:mutipleMongooseToObject(courses)
+            
+        }))
+        .catch(next);
 
+    }
 
 }
 
